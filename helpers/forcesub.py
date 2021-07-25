@@ -24,14 +24,14 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Unable to do Force Subscribe to {info.UPDATES_CHANNEL}\n\nError: {err}\n\nContact Support Group: https://t.me/leosupportx")
+        print(f"Unable to do Force Subscribe to {info.UPDATES_CHANNEL}\n\nError: {err}")
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(info.UPDATES_CHANNEL) if info.UPDATES_CHANNEL.startswith("-100") else info.UPDATES_CHANNEL), user_id=event.from_user.id)
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=event.from_user.id,
-                text="Sorry Dear, You are Banned to use me ☹️\nFeel free to say in our [Support Group](https://t.me/leosupportx).",
+                text="Sorry Dear, You are Banned to use me☹️",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
                 reply_to_message_id=event.message_id
@@ -42,11 +42,11 @@ async def ForceSub(bot: Client, event: Message):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=event.from_user.id,
-            text="<b>Hello {} 👋</b>\n\n<b>You cant use me untill subscribe our updates channel ☹️</b>\n<b>So Please join our updates channel by the following button and restart our bot by ( /start ) command 😊</b>".format(event.from_user.mention),
+            text="<b>Hello {}</b> \n\n<b>★You Must Subscribe Our Channel to Use Me😇</b> \n\n<b>☆මාව භාවිතා කිරීමට කලින් ඔයා අපේ Channel එක Subscribe කරන තියෙන්න ඕන😇</b> \n\n<b>★Click the Following Button to Join Our Channel😊</b> \n\n<b>☆පහලින් තියෙන Button එක ඔබල අපේ Channel එකට Join වෙන්න😊</b> \n\n<b>★After That Hit /start to Restart the Bot🤗</b> \n\n<b>☆ඊට පස්සෙ /start ඔබල Bot Restart කර ගන්න🤗</b>".format(event.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Join Our Updates Channel 🗣", url=invite_link.invite_link)
+                        InlineKeyboardButton("🔰Join Our Channel🔰", url=invite_link.invite_link)
                     ]
                 ]
             ),
@@ -59,5 +59,5 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}\n\nContact Support Group: https://t.me/leosupportx")
+        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}")
         return 200
