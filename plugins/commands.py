@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command('start'))
 async def start(bot, message):
     if message.from_user.id in info.BANNED_USERS:
-        await message.reply_text("Sorry, You are banned to use me ☹️ Please Contact  Bot Owner 😊")
+        await message.reply_text("Sorry, You are banned to use me☹️\nPlease Contact  Bot Owner😊")
         return
     await AddUserToDatabase(bot, message)
     FSub = await ForceSub(bot, message)
@@ -40,11 +40,7 @@ async def start(bot, message):
     else:
         buttons = [
             [
-                InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/new_ehi'),
-                InlineKeyboardButton('Go Inline 🎭', switch_inline_query=''),
-            ],
-            [
-                InlineKeyboardButton('Search Media 🔎', switch_inline_query_current_chat=''),
+                InlineKeyboardButton('👉 Tap to Search 👈', switch_inline_query_current_chat=''),
             ],
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -65,7 +61,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '📑 **Indexed channels/groups**\n'
+    text = '📥**Indexed Channels & Groups**📥\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:
