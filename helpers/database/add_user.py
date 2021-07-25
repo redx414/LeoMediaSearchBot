@@ -10,5 +10,5 @@ async def AddUserToDatabase(bot: Client, cmd: Message):
         if info.LOG_CHANNEL is not None:
             await bot.send_message(
                 int(info.LOG_CHANNEL),
-                f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{(await bot.get_me()).username} 😊"
+                f"[{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) Started Using Our Bot🤩 \n\n#New_User @{(await bot.get_me()).username}"
             )
