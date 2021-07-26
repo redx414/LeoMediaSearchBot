@@ -81,7 +81,7 @@
         },
         "SHARE_BUTTON_TEXT": {
             "description": "A Massege for add to share button. If you want to change it you can change it here",
-            "value": "**🇱🇰 RED X Bot 🇱🇰** \n\n'You Can Get Movies, TV Series & Games By Using This Bot😊' \n\nBot : {username}😍 \n\nUpdate Channel : @redx414news \nDeveloper : @RedX14",
+            "value": "**🇱🇰 RED X Bot 🇱🇰** \n\n'You Can Get Movies, TV Series & Games By Using This Bot😊' \n\nBot : {username}😍 \nUpdate Channel : @redx414news \nDeveloper : @RedX14",
             "required": false
         },
         "USE_CAPTION_FILTER": {
