@@ -49,7 +49,7 @@ async def answer(bot, query):
                 reply_markup=reply_markup))
 
     if results:
-        switch_pm_text = f"{emoji.FILE_FOLDER} Newly Uploaded Movies"
+        switch_pm_text = f"{emoji.FILE_FOLDER} Newly Uploaded Movies🔻"
         if string:
             switch_pm_text += f" for {string}"
 
