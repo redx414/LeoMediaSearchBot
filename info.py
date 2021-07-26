@@ -62,7 +62,7 @@ default_start_massege = """
 """
 
 default_share_button_text = """
-🇱🇰 RED X Bot 🇱🇰
+**🇱🇰 RED X Bot 🇱🇰**
 
 'You Can Get Movies, TV Series & Games By Using This Bot😊'
 
