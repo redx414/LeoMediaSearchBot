@@ -19,7 +19,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='Please touch here to join our updates channel 😊',
+                           switch_pm_text='❤️🙊You Must Subscribe Our Channel🙊❤️',
                            switch_pm_parameter="subscribe")
         return
 
@@ -49,7 +49,7 @@ async def answer(bot, query):
                 reply_markup=reply_markup))
 
     if results:
-        switch_pm_text = f"{emoji.FILE_FOLDER} Latest Updates 🔄👇"
+        switch_pm_text = f"{emoji.FILE_FOLDER} Newly Uploaded Movies"
         if string:
             switch_pm_text += f" for {string}"
 
@@ -74,13 +74,8 @@ def get_reply_markup(username, query):
     url = 't.me/share/url?url=' + quote(SHARE_BUTTON_TEXT.format(username=username))
     buttons = [
         [
-           InlineKeyboardButton('Search Again 🔎', switch_inline_query_current_chat=query),
-           InlineKeyboardButton('Share Our Bot ✅', url=url),
-        ],
-
-        [
-           InlineKeyboardButton('Updates Channel 🗣', url='https://t.me/new_ehi'),
-           InlineKeyboardButton('Rate us ★', url='https://t.me/tlgrmcbot?start=leoinlinesearchbot-review'),
+           InlineKeyboardButton('Search Again🔎', switch_inline_query_current_chat=query),
+           InlineKeyboardButton('Share Bot✅', url=url),
         ],
     ]
     return InlineKeyboardMarkup(buttons)
