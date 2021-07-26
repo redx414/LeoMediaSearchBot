@@ -139,9 +139,9 @@ async def delete(bot, message):
         'caption': reply.caption
     })
     if result.deleted_count:
-        await msg.edit('File is successfully deleted from database\nLeo Projects🇱🇰')
+        await msg.edit('File is Successfully Deleted From Database')
     else:
-        await msg.edit('File not found in database\nLeo Projects🇱🇰')
+        await msg.edit('File Not Found in Database')
 
 
 @Client.on_message(filters.private & filters.command("broadcast") & filters.user(info.BOT_OWNER) & filters.reply)
