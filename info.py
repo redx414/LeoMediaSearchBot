@@ -46,22 +46,17 @@ MONGODB_URI = os.environ.get("MONGODB_URI", "")
 SESSION_NAME = os.environ.get("SESSION_NAME", "LeoMediaSearchBot")
 # Messages
 default_start_massege = """
-**Hi {}👋
+**✦You Must Join Our Channel to Search a Movie😇
 
-I'm Leo Media Search Bot**
+✧(Movie Search කිරීමට නම් ඔයා අපේ Channel එකට Join වෙලා තිබීම අත්‍යවශ්‍ය වේ😇)
 
-You can start searching by the "Search Media 🔎" button below 😊
-"""
+✦You Will Recieve a Message Saying '❌Unsupported Message type.'😒 Just Ignore It😌
 
-default_share_button_text = """
-Leo Media Search Bot 🇱🇰
+✧(ඔයාලට '❌Unsupported Message type.' කියල Error එකක් පෙන්නයි😒 ඒක එච්චර ගනන් ගන්න එපා😌)
 
-Here you can find any media file by searching its name 😊
+✦Click the Search Button Below to Find the Movie You Want😊
 
-Bot : {username} 🤖
-Support Group : @leosupportx 🇱🇰
-Updates Channel: @new_ehi 🇱🇰
-Developper : @naviya2 🇱🇰
+✧(ඔයාට අවශ්‍ය Movie එක ලබා ගැනීමට Search Button එක Click කරන්න😊)**
 """
 
 START_MSG = environ.get('START_MSG', default_start_massege)
