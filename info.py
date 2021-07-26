@@ -46,7 +46,9 @@ MONGODB_URI = os.environ.get("MONGODB_URI", "")
 SESSION_NAME = os.environ.get("SESSION_NAME", "LeoMediaSearchBot")
 # Messages
 default_start_massege = """
-**✦You Must Join Our Channel to Search a Movie😇
+**Hello {} 
+
+✦You Must Join Our Channel to Search a Movie😇
 
 ✧(Movie Search කිරීමට නම් ඔයා අපේ Channel එකට Join වෙලා තිබීම අත්‍යවශ්‍ය වේ😇)
 
