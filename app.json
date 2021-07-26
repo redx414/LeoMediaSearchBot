@@ -76,12 +76,12 @@
         },
         "START_MSG": {
             "description": "A Massege for view at start. If you want to change it you can change it here",
-            "value": "**Hi {}👋\n\nI'm Leo Media Search Bot**\n\nYou can start searching by the 'Search Media 🔎' button below 😊",
+            "value": "**Hello {}\n\n**✦You Must Join Our Channel to Search a Movie😇\n\n✧(Movie Search කිරීමට නම් ඔයා අපේ Channel එකට Join වෙලා තිබීම අත්‍යවශ්‍ය වේ😇)\n\n✦You Will Recieve a Message Saying '{emoji.CROSS_MARK}Unsupported Message type.'😒 Just Ignore It😌\n\n✧(ඔයාලට '{emoji.CROSS_MARK}Unsupported Message type.' කියල Error එකක් පෙන්නයි😒 ඒක එච්චර ගනන් ගන්න එපා😌)\n\n✦Click the Search Button Below to Find the Movie You Want😊\n\n✧(ඔයාට අවශ්‍ය Movie එක ලබා ගැනීමට Search Button එක Click කරන්න😊)**",
             "required": false
         },
         "SHARE_BUTTON_TEXT": {
             "description": "A Massege for add to share button. If you want to change it you can change it here",
-            "value": "**Leo Media Search Bot 🇱🇰**\n\n`Here you can find any media file by searching its name 😊´\n\nBot : {username} 🤖\nSupport Group : @leosupportx 🇱🇰\nUpdates Channel: @new_ehi 🇱🇰\nDevelopper : @naviya2 🇱🇰",
+            "value": "**RED X Bot** \n\nYou Can Get Movies, TV Series & Games By Using This Bot😊 \n\nBot : {username}😍 \n\nUpdate Channel : @redx414news \nDeveloper : @RedX14",
             "required": false
         },
         "USE_CAPTION_FILTER": {
