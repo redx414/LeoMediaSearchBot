@@ -41,7 +41,7 @@ async def broadcast_handler(m: Message):
         if not broadcast_ids.get(broadcast_id):
             break
     out = await m.reply_text(
-        text=f"🔊Broadcast Started🔊 \n\nYou Will Receive a Log After the Message  Delivers😊 \n\n🤖 @{info.BOT_USERNAME} 🤖"
+        text=f"🔊Broadcast Started🔊 \n\nYou Will Receive a Log After the Message  Delivers to all of the Members😊 \n\n🤖 @{info.BOT_USERNAME} 🤖"
     )
     start_time = time.time()
     total_users = await db.total_users_count()
