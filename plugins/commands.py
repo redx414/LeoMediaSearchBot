@@ -88,10 +88,10 @@ async def total(bot, message):
     if FSub == 400:
         return
     """Show total files in database"""
-    msg = await message.reply("Processing...⏳\nLeo Projects 🇱🇰", quote=True)
+    msg = await message.reply("Processing...⏳🇰", quote=True)
     try:
         total = await Media.count_documents()
-        await msg.edit(f'📁 Total files saved in Leo Media Search Bots Database: {total}')
+        await msg.edit(f'📁 Saved Files Count: {total}')
     except Exception as e:
         logger.exception('Failed to check total files')
         await msg.edit(f'Error: {e}')
@@ -119,9 +119,9 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳\nLeo Projects 🇱🇰", quote=True)
+        msg = await message.reply("Processing...⏳", quote=True)
     else:
-        await message.reply('Reply to file with /delete which you want to delete', quote=True)
+        await message.reply('Reply to File With /delete Which You Want to Delete', quote=True)
         return
 
     for file_type in ("document", "video", "audio"):
@@ -160,7 +160,7 @@ async def show_status_count(_, bot: Message):
     disk_usage = psutil.disk_usage('/').percent
     total_users = await db.total_users_count()
     await bot.reply_text(
-        text=f"**Total Disk Space:** {total} \n**Used Space:** {used}({disk_usage}%) \n**Free Space:** {free} \n**CPU Usage:** {cpu_usage}% \n**RAM Usage:** {ram_usage}%\n\n**Total Users in DB:** `{total_users}`\n\n@{info.BOT_USERNAME} 🤖",
+        text=f"**Total Disk Space:** {total} \n**Used Space:** {used}({disk_usage}%) \n**Free Space:** {free} \n**CPU Usage:** {cpu_usage}% \n**RAM Usage:** {ram_usage}%\n\n**Total Users in DB:** `{total_users}`\n\n🤖 @{info.BOT_USERNAME} 🤖",
         parse_mode="Markdown",
         quote=True
     )
