@@ -61,6 +61,16 @@ default_start_massege = """
 ✧(ඔයාට අවශ්‍ය Movie එක ලබා ගැනීමට Search Button එක Click කරන්න😊)**
 """
 
+default_share_button_text = """
+🇱🇰 RED X Bot 🇱🇰
+
+'You Can Get Movies, TV Series & Games By Using This Bot😊'
+
+Bot : {username}😍
+Update Channel : @redx414news
+Developer : @RedX14
+"""
+
 START_MSG = environ.get('START_MSG', default_start_massege)
 
 SHARE_BUTTON_TEXT = environ.get('SHARE_BUTTON_TEXT', default_share_button_text)
