@@ -48,26 +48,26 @@ SESSION_NAME = os.environ.get("SESSION_NAME", "LeoMediaSearchBot")
 default_start_massege = """
 **Hello {} 
 
-✦You Must Join Our Channel to Search a Movie😇
+✦You Must Join Our Channel to Search a Movie😇 
 
-✧(Movie Search කිරීමට නම් ඔයා අපේ Channel එකට Join වෙලා තිබීම අත්‍යවශ්‍ය වේ😇)
+✧(Movie Search කිරීමට නම් ඔයා අපේ Channel එකට Join වෙලා තිබීම අත්‍යවශ්‍ය වේ😇) 
 
-✦You Will Recieve a Message Saying '❌Unsupported Message type.'😒 Just Ignore It😌
+✦You Will Recieve a Message Saying '❌Unsupported Message type.'😒 Just Ignore It😌 
 
-✧(ඔයාලට '❌Unsupported Message type.' කියල Error එකක් පෙන්නයි😒 ඒක එච්චර ගනන් ගන්න එපා😌)
+✧(ඔයාලට '❌Unsupported Message type.' කියල Error එකක් පෙන්නයි😒 ඒක එච්චර ගනන් ගන්න එපා😌) 
 
-✦Click the Search Button Below to Find the Movie You Want😊
+✦Click the Search Button Below to Find the Movie You Want😊 
 
 ✧(ඔයාට අවශ්‍ය Movie එක ලබා ගැනීමට Search Button එක Click කරන්න😊)**
 """
 
 default_share_button_text = """
-**🇱🇰 RED X Bot 🇱🇰**
+**🇱🇰 RED X Bot 🇱🇰** 
 
-'You Can Get Movies, TV Series & Games By Using This Bot😊'
+'You Can Get Movies, TV Series & Games By Using This Bot😊' 
 
-Bot : {username}😍
-Update Channel : @redx414news
+Bot : {username}😍 
+Update Channel : @redx414news 
 Developer : @RedX14
 """
 
