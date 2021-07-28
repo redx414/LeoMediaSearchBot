@@ -5,14 +5,14 @@ from os import environ
 id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
-SESSION = environ.get('SESSION', 'test4')
-USER_SESSION = environ.get('USER_SESSION', 'test5')
-APP_ID = int(environ('APP_ID', 6657305))
-API_HASH = environ('API_HASH', '10ca9a965d788b977b45226e82dd4174')
-BOT_TOKEN = environ('BOT_TOKEN', '1933475915:AAFKb67RXRgtGsquv7xCvvXFhuIucTD6Wf8')
-USERBOT_STRING_SESSION = environ.get('USERBOT_STRING_SESSION', 'test4')
-BOT_OWNER = int(os.environ.get("BOT_OWNER", 1859164817))
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "Test_414_bot")
+SESSION = environ.get('SESSION', '')
+USER_SESSION = environ.get('USER_SESSION', 'User_Bot')
+APP_ID = int(environ['APP_ID'])
+API_HASH = environ['API_HASH']
+BOT_TOKEN = environ['BOT_TOKEN']
+USERBOT_STRING_SESSION = environ.get('USERBOT_STRING_SESSION')
+BOT_OWNER = int(os.environ.get("BOT_OWNER", 1069002447))
+BOT_USERNAME = os.environ.get("BOT_USERNAME")
 
 # Bot settings
 MAX_RESULTS = int(environ.get('MAX_RESULTS', 10))
@@ -20,30 +20,30 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS', 1859164817].split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS', -1001572776649].split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS'].split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001175433925))
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
 
 # MongoDB information
-DATABASE_URI = environ['DATABASE_URI', 'mongodb+srv://test4:rUq!657yAGYBa_S@cluster0.rgpna.mongodb.net/myFirstDatabase?retryWrites=true&w=majority']
-DATABASE_NAME = environ['DATABASE_NAME', 'test4']
+DATABASE_URI = environ['DATABASE_URI']
+DATABASE_NAME = environ['DATABASE_NAME']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 #for broadcast and force sub
-BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
-UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", -1001404671682)
+BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", ""))
+UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", None)
 
 #ban/unban
 BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
 BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 
 #for broadcast and user stts db
-MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://test5:rUq!657yAGYBa_S@cluster0.lmciz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-SESSION_NAME = os.environ.get("SESSION_NAME", "test5")
+MONGODB_URI = os.environ.get("MONGODB_URI", "")
+SESSION_NAME = os.environ.get("SESSION_NAME", "LeoMediaSearchBot")
 
 # Messages
 default_start_massege = """
