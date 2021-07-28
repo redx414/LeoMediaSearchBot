@@ -7,11 +7,11 @@ id_pattern = re.compile(r'^.\d+$')
 # Bot information
 SESSION = environ.get('SESSION', 'test4')
 USER_SESSION = environ.get('USER_SESSION', 'test5')
-APP_ID = int(environ['APP_ID', '6657305'])
-API_HASH = environ['API_HASH', '10ca9a965d788b977b45226e82dd4174']
-BOT_TOKEN = environ['BOT_TOKEN', '1933475915:AAFKb67RXRgtGsquv7xCvvXFhuIucTD6Wf8']
+APP_ID = int(environ('APP_ID', 6657305))
+API_HASH = environ('API_HASH', '10ca9a965d788b977b45226e82dd4174')
+BOT_TOKEN = environ('BOT_TOKEN', '1933475915:AAFKb67RXRgtGsquv7xCvvXFhuIucTD6Wf8')
 USERBOT_STRING_SESSION = environ.get('USERBOT_STRING_SESSION', 'test4')
-BOT_OWNER = int(os.environ.get("BOT_OWNER", '1859164817'))
+BOT_OWNER = int(os.environ.get("BOT_OWNER", 1859164817))
 BOT_USERNAME = os.environ.get("BOT_USERNAME", "Test_414_bot")
 
 # Bot settings
@@ -20,13 +20,13 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS', '1859164817'].split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS', '-1001572776649'].split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS', 1859164817].split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS', -1001572776649].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", '-1001175433925'))
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001175433925))
 
 # MongoDB information
 DATABASE_URI = environ['DATABASE_URI', 'mongodb+srv://test4:rUq!657yAGYBa_S@cluster0.rgpna.mongodb.net/myFirstDatabase?retryWrites=true&w=majority']
@@ -34,8 +34,8 @@ DATABASE_NAME = environ['DATABASE_NAME', 'test4']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 #for broadcast and force sub
-BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
-UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", '-1001404671682')
+BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
+UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", -1001404671682)
 
 #ban/unban
 BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
